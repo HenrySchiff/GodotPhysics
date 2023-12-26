@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://6bkkmv4ivjdl"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_5q7pt"]
+[ext_resource type="Texture2D" uid="uid://kknnvte1yk0g" path="res://FAMAS.png" id="1_6bl0c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_julgi"]
+size = Vector2(64, 176)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_5q7pt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_julgi")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.639216, 0.639216, 0.639216, 1)
+polygon = PackedVector2Array(-32, -88, 32, -88, 32, -72.1746, 32, 88, -32, 88)
+
+[node name="GunImage" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-3.8147e-06, 0)
+scale = Vector2(-5, -5)
+texture = ExtResource("1_6bl0c")
+
+[node name="MuzzlePoint" type="Marker2D" parent="GunImage"]
+position = Vector2(-26.4, 0)

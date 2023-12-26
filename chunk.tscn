@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxacqtmw5ac8f"]
+
+[ext_resource type="Texture2D" uid="uid://8jwb1c2e0ika" path="res://brick.png" id="1_4ttb4"]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(-80, -80)
+texture = ExtResource("1_4ttb4")
+texture_scale = Vector2(0.1, 0.1)
+polygon = PackedVector2Array(60, 50, 80, 50, 80, 60, 100, 60, 100, 70, 110, 70, 110, 100, 100, 100, 100, 90, 70, 90, 70, 100, 60, 100, 60, 63.8979)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-20, -30, 0, -30, 0, -20, 20, -20, 20, -10, 30, -10, 30, 20, 20, 20, 20, 10, -10, 10, -10, 20, -20, 20)

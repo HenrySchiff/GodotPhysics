@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dujrukkw8bufc"]
+
+[ext_resource type="Script" path="res://pixel.gd" id="1_m6mhl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5472q"]
+size = Vector2(10, 10)
+
+[node name="Pixel" type="RigidBody2D"]
+script = ExtResource("1_m6mhl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5472q")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(10, 0)
+shape = SubResource("RectangleShape2D_5472q")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(0, -10)
+shape = SubResource("RectangleShape2D_5472q")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(0, -20)
+shape = SubResource("RectangleShape2D_5472q")

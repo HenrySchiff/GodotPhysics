@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://hto73kftsvei"]
+
+[ext_resource type="Texture2D" uid="uid://8jwb1c2e0ika" path="res://brick.png" id="1_4ttb4"]
+[ext_resource type="Script" path="res://block.gd" id="1_dhhsj"]
+
+[node name="Block" type="RigidBody2D"]
+script = ExtResource("1_dhhsj")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-80, -80, 80, -80, 80, 80, -80, 80)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(-80, -80)
+texture = ExtResource("1_4ttb4")
+texture_scale = Vector2(0.1, 0.1)
+polygon = PackedVector2Array(0, 0, 160, 0, 160, 80, 160, 160, 0, 160)
+uv = PackedVector2Array(0, 0, 160, 0, 160, 160, 0, 160)
